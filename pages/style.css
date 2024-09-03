@@ -1,0 +1,181 @@
+/* Importing a new font style */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* General Reset: Remove default margin and padding from some elements */
+body, h2, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width and height calculations more predictable */
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Nunito', sans-serif; /* Use the Nunito font */
+    background: linear-gradient(135deg, #34e89e, #0f3443); /* Gradient background */
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for centering the form */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Style for the form container */
+.form-container {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Subtle gradient for background */
+    padding: 40px; /* Increased padding for a more spacious look */
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+    max-width: 600px; /* Maximum width */
+    width: 100%; /* Full width within container */
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+    position: relative; /* For decorative elements */
+    overflow: hidden; /* To hide decorative elements overflow */
+    transform: translateY(-10px); /* Initial upward translation for a slide-in effect */
+}
+
+/* Decorative element */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 123, 255, 0.07); /* Soft blue decorative circle */
+    border-radius: 50%;
+    z-index: -1; /* Place behind the form */
+    box-shadow: inset 0 0 20px rgba(0, 123, 255, 0.15); /* Inner glow effect */
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+/* Header styling */
+h2 {
+    text-align: center; /* Center-align text */
+    color: #00a8cc; /* Bright blue text color */
+    margin-bottom: 25px; /* More space below the header */
+    font-size: 32px; /* Larger font size for header */
+    font-weight: 700; /* Bolder font weight */
+    letter-spacing: 1.5px; /* More spacing between letters */
+    text-transform: uppercase; /* Make the header uppercase */
+}
+
+/* Style for input fields */
+.box {
+    width: 100%; /* Full width of the form container */
+    padding: 14px; /* Increased padding for larger input fields */
+    margin-bottom: 20px; /* More space below inputs */
+    border: 2px solid #ddd; /* Slightly thicker gray border */
+    border-radius: 8px; /* More rounded corners */
+    font-size: 16px; /* Font size for input text */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Change border color on focus */
+.box:focus {
+    border-color: #00a8cc; /* Bright blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(0, 168, 204, 0.3); /* Stronger shadow on focus */
+}
+
+/* Style for submit button */
+input[type="submit"], button {
+    background-color: #ff5722 !important; /* Vibrant orange background for button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 14px 26px; /* Increased padding for a larger button */
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+    font-weight: 600; /* Bolder font weight */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    text-transform: uppercase; /* Uppercase text for the button */
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover, button:hover {
+    background-color: #e64a19 !important; /* Darker orange on hover */
+    transform: translateY(-3px) scale(1.05); /* Slightly elevate and enlarge the button */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with 0 opacity */
+        transform: translateY(-20px); /* Slide up from a higher position */
+    }
+    to {
+        opacity: 1; /* End with full opacity */
+        transform: translateY(0); /* Settle into final position */
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 25px; /* Reduced padding for small screens */
+    }
+
+    h2 {
+        font-size: 28px; /* Smaller font size on small screens */
+    }
+
+    .box {
+        font-size: 14px; /* Smaller font size for input fields */
+    }
+
+    input[type="submit"], button {
+        font-size: 14px; /* Smaller font size for submit button */
+    }
+}
+
+/* Style for the success page */
+.success-container {
+    background-color: #00a8cc; /* Bright blue background color */
+    color: #fff; /* White text color */
+    padding: 40px; /* Increased padding */
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+    max-width: 500px; /* Maximum width */
+    width: 100%; /* Full width within container */
+    text-align: center; /* Center-align text */
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+/* Header styling for success page */
+h1 {
+    color: #fff; /* White text color */
+    font-size: 34px; /* Font size for header */
+    font-weight: 700; /* Slightly bolder font weight */
+    margin-bottom: 20px;
+}
+
+/* Error container style */
+.error-container {
+    background-color: #e63946; /* Bright red background color */
+    color: #fff; /* White text color */
+    padding: 40px; /* Increased padding */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    max-width: 500px; /* Maximum width */
+    width: 100%; /* Full width within container */
+    text-align: center; /* Center-align text */
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
